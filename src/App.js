@@ -26,4 +26,17 @@ export default function App() {
         </View>
         )
     }
+
+    // Renderizar os dados na tela -> 
+
+    return (
+        <FlatList
+        data={data}
+        renderItem={({item}) => (
+            <View style={styles.center}>
+                <Text style={styles.center}>{item.name}</Text>
+            </View>
+        )}
+        />
+    )
 }
